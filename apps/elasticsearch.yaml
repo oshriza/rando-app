@@ -7,8 +7,8 @@ spec:
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    repoURL: 'https://charts.bitnami.com/bitnami'
-    targetRevision: 19.1.7
+    repoURL: 'https://helm.elastic.co'
+    targetRevision: 7.17.3
     chart: elasticsearch
     helm:
       values: |
