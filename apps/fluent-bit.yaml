@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: fluentd
+  name: fluent-bit
 spec:
   destination:
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    repoURL: 'https://charts.bitnami.com/bitnami'
-    targetRevision: 5.3.2
-    chart: fluentd
+    repoURL: 'https://fluent.github.io/helm-charts'
+    targetRevision: 0.20.5
+    chart: fluent-bit
   project: default
   syncPolicy:
     automated:

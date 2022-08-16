@@ -10,6 +10,15 @@ spec:
     repoURL: 'https://charts.bitnami.com/bitnami'
     targetRevision: 10.1.19
     chart: kibana
+    helm:
+      values: |
+        service:
+          type: LoadBalancer
+        resources:
+          requests:
+            cpu: "150m"
+          limits:
+            cpu: "1500m"
   project: default
   syncPolicy:
     automated:

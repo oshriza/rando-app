@@ -11,7 +11,7 @@ spec:
     namespace: argocd
   source:
     path: apps
-    repoURL: 'git@github.com:oshriza/demo-crm-chart.git'
+    repoURL: 'git@github.com:oshriza/rando-app.git'
     targetRevision: HEAD
   project: default
   syncPolicy:
