@@ -14,9 +14,9 @@ spec:
       values: |
         resources:
           requests:
-            cpu: "150m"
+            cpu: "100m"
           limits:
-            cpu: "1500m"
+            cpu: "1000m"
   project: default
   syncPolicy:
     automated:
