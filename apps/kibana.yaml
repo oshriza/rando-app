@@ -16,9 +16,8 @@ spec:
           type: LoadBalancer
         resources:
           requests:
-            cpu: "100m"
-          limits:
-            cpu: "1000m"
+            cpu: "150m"
+            memory: "256Mi"
   project: default
   syncPolicy:
     automated:
