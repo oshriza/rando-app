@@ -11,22 +11,23 @@ spec:
     targetRevision: 0.20.5
     chart: fluent-bit
     helm:
-      fluent-bit.conf: |
-        [OUTPUT]
-            Name            es
-            Match           *
-            Host            ELASTICSERVER
-            Port            9200
-            Index           <fluent-bit-{now/d}>
-            Retry_Limit     20
-            Replace_Dots    On
-      parsers.conf: |
-        [PARSER]
-            Name         docker
-            Format       json
-            Time_Key     time
-            Time_Format  %Y-%m-%dT%H:%M:%S.%L
-            Time_Keep    On
+      values: |
+        fluent-bit.conf: |
+          [OUTPUT]
+              Name            es
+              Match           *
+              Host            ELASTICSERVER
+              Port            9200
+              Index           <fluent-bit-{now/d}>
+              Retry_Limit     20
+              Replace_Dots    On
+        parsers.conf: |
+          [PARSER]
+              Name         docker
+              Format       json
+              Time_Key     time
+              Time_Format  %Y-%m-%dT%H:%M:%S.%L
+              Time_Keep    On
   project: default
   syncPolicy:
     automated:
