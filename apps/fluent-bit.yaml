@@ -17,7 +17,7 @@ spec:
             [OUTPUT]
                 Name es
                 Match *
-                Host ELASTICSERVER
+                Host elasticsearch-master
                 Port 9200
                 Index <fluent-bit-{now/d}>
                 Retry_Limit 20
